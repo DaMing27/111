@@ -320,7 +320,7 @@
 
     var head = el("div", "feedback-head");
     head.appendChild(el("h1", null, "反馈与建议"));
-    head.appendChild(el("p", null, "本站已从 WorkBuddy 迁出，反馈通道改为 GitHub Issues。提交后会生成一条公开 Issue；如果暂时不方便登录 GitHub，也可以复制内容后发给小组。"));
+    head.appendChild(el("p", null, "本站为独立的 GitHub Pages 版本，反馈通道使用 GitHub Issues。提交后会生成一条公开 Issue；如果暂时不方便登录 GitHub，也可以复制内容后发给小组。"));
     container.appendChild(head);
 
     var grid = el("div", "feedback-grid");
