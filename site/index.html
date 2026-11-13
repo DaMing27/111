@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>三张活地图 · 数学与算法基础</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home">
+        <span class="brand-mark" aria-hidden="true">▦</span>
+        <span class="brand-text">
+          <span class="brand-title">三张活地图</span>
+          <span class="brand-sub">数学与算法基础</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#home" data-view="home">首页</a>
+        <a href="#domain" data-view="domain">领域地图</a>
+        <a href="#ecosystem" data-view="ecosystem">生态地图</a>
+        <a href="#cognition" data-view="cognition">认知地图</a>
+        <a href="#updates" data-view="updates">更新记录</a>
+        <a href="#todos" data-view="todos">待办</a>
+        <a href="#feedback" data-view="feedback">反馈与建议</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <!-- 首页 -->
+    <section id="view-home" class="view" data-view="home" hidden>
+      <div class="hero">
+        <p class="hero-kicker">课程大作业 · 数学与算法基础</p>
+        <h1 class="hero-title">主线问题：机器学习为什么需要数学</h1>
+        <p class="hero-lead">
+          我们以「<strong>机器学习为什么需要数学</strong>」为主线问题，研究「数学与算法基础」这一方向：
+          <strong>领域地图</strong>回答需要学哪些数学、各解决什么；<strong>生态地图</strong>回答去哪里学、用什么练；
+          <strong>认知地图</strong>回答怎么确认自己真的懂了。
+          我们选择「监督学习」作为典型任务，以「图像分类」作为直观的应用举例，并把基本问题扩展到模型评估、损失函数、特征表示等相邻问题；
+          模型训练的完整细节与深度数学推导<strong>暂不展开</strong>。
+          本主题为教学示例，其他小组可自行更换选题。
+        </p>
+        <p class="hero-note">
+          当前版本 <span class="ver-badge" id="home-version">v0.6</span> · 2026-11-13
+        </p>
+        <p class="hero-storage">
+          本站已从 WorkBuddy 迁出，作为静态站点托管在 GitHub Pages；反馈通过 GitHub Issue 跨设备提交。
+          地图内容与更新记录保存在仓库的 <code>site/js/data.js</code> 中，推送后自动发布。
+        </p>
+      </div>
+
+      <div class="map-entry-grid">
+        <a class="map-entry-card" href="#domain">
+          <span class="map-entry-numeral" style="color:#185FA5">壹</span>
+          <h2>领域地图</h2>
+          <p>这个领域有什么<strong>知识、方法和工具</strong>？它们怎样关联？以后在哪里学？</p>
+          <span class="map-entry-cta" style="color:#185FA5">进入领域地图 →</span>
+        </a>
+        <a class="map-entry-card" href="#ecosystem">
+          <span class="map-entry-numeral" style="color:#993C1D">贰</span>
+          <h2>生态地图</h2>
+          <p><strong>谁在推动</strong>这个领域？技术、资源、工具与社区如何运转？</p>
+          <span class="map-entry-cta" style="color:#993C1D">进入生态地图 →</span>
+        </a>
+        <a class="map-entry-card" href="#cognition">
+          <span class="map-entry-numeral" style="color:#0F6E56">叁</span>
+          <h2>认知地图</h2>
+          <p>面对领域问题，我们<strong>怎样思考、分析、实践</strong>，并持续成长？</p>
+          <span class="map-entry-cta" style="color:#0F6E56">进入认知地图 →</span>
+        </a>
+      </div>
+
+      <div class="routes">
+        <h2>跨图探索路线</h2>
+        <p class="routes-desc">从领域地图的一个概念出发，找到帮助学习的资源，再落到对应的分析或学习计划。点击任一步可直接打开该条目。</p>
+        <div class="route-list" id="route-list"></div>
+      </div>
+
+      <div class="legend">
+        <h2>图例：条目状态标记</h2>
+        <div id="legend-list"></div>
+      </div>
+
+      <div class="howto">
+        <h2>怎么用</h2>
+        <ul>
+          <li>在三张地图中点击卡片查看详情；详情面板内的「相关条目」可以继续跳转，用 Esc 或「关闭」返回。</li>
+          <li>在卡片详情里点「对此内容提反馈」，会打开预填好的 GitHub Issue 页面（需 GitHub 账号；也可复制内容发给小组）。</li>
+          <li>地图内容与更新记录保存在仓库的 site/js/data.js 中；推送到 main 后由 GitHub Pages 自动发布。</li>
+          <li>键盘操作：卡片可用 Tab 聚焦、Enter 打开，详情面板用 Esc 关闭。</li>
+        </ul>
+      </div>
+
+      <div class="home-links">
+        <a class="btn btn-outline" href="#updates">查看更新记录</a>
+        <a class="btn btn-outline" href="#feedback">提交反馈与建议</a>
+      </div>
+    </section>
+
+    <!-- 三张地图（由 app.js 渲染） -->
+    <section id="view-domain" class="view" data-view="domain" hidden></section>
+    <section id="view-ecosystem" class="view" data-view="ecosystem" hidden></section>
+    <section id="view-cognition" class="view" data-view="cognition" hidden></section>
+
+    <!-- 更新记录 -->
+    <section id="view-updates" class="view" data-view="updates" hidden></section>
+
+    <!-- 待办清单 -->
+    <section id="view-todos" class="view" data-view="todos" hidden></section>
+
+    <!-- 反馈与建议 -->
+    <section id="view-feedback" class="view" data-view="feedback" hidden></section>
+  </main>
+
+  <!-- 详情面板 -->
+  <aside id="detail-panel" class="detail-panel" role="dialog" aria-modal="true" aria-labelledby="detail-title" hidden>
+    <div class="detail-scrim" data-close-detail></div>
+    <div class="detail-body">
+      <div class="detail-content" id="detail-content" tabindex="-1"></div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <p>三张活地图 · 数学与算法基础 — 课程大作业基础版原型。内容随学习持续更新。</p>
+    <p>本页面部分专业内容为演示初稿，已标注「待核实」，请以可核查来源为准。</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/feedback.js"></script>
+</body>
+</html>
