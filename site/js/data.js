@@ -999,22 +999,22 @@ window.VERSIONS = [
   {
     version: "v0.6",
     date: "2026-11-13",
-    summary: "站点从 WorkBuddy 迁出，改用 GitHub Pages 静态托管；反馈改为 GitHub Issues，地图与关系网络内容保持不变。",
+    summary: "站点改为 GitHub Pages 独立托管；反馈改为 GitHub Issues，地图与关系网络内容保持不变。",
     detail: {
       maps: ["全站", "反馈与建议", "更新记录"],
       entries: [
-        "站点从 WorkBuddy 分享页迁移到 GitHub Pages 静态托管",
+        "站点从原发布平台迁移到 GitHub Pages 静态托管",
         "反馈功能改为 GitHub Issue 预填提交与公开列表",
         "新增仓库 README 与 GitHub Actions 自动发布工作流",
       ],
       changes: [
-        "移除 WorkBuddy 云 SDK 与 publishableKey；浏览地图、更新记录不再依赖任何云服务。",
+        "移除原发布平台的云 SDK 与 publishableKey；浏览地图、更新记录不再依赖任何云服务。",
         "反馈页改为：填写后打开预填好的 GitHub Issue，公开可查、跨设备；没有 GitHub 账号时可复制反馈内容。",
         "新增 GitHub Actions 工作流：推送 main 后自动部署 site/ 到 GitHub Pages。",
         "更新首页版本、托管说明与「怎么用」；待办补充仓库协作与 Issue 验证项。",
         "原有地图、关系网络与 D07–D17 条目的内容不变。",
       ],
-      reason: "摆脱 WorkBuddy 只读发布链接的限制，让站点可以被任何设备访问，并通过 Git 仓库协作维护。",
+      reason: "摆脱只读发布链接的限制，让站点可以被任何设备访问，并通过 Git 仓库协作维护。",
       openIssues: "GitHub Issue 反馈需要 GitHub 账号；仓库目前使用临时名称 111，后续可改名并同步 feedback.js 中的仓库配置。",
       nextPlan: "邀请组员成为仓库协作者；完成一次真实 Issue 提交与回复；继续核对 D07–D17 条目的教材来源。",
       division: "待填写",
